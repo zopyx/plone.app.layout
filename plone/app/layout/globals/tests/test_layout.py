@@ -1,10 +1,10 @@
-from plone.registry.interfaces import IRegistry
-from plone.portlets.interfaces import IPortletType
-from zope.component import getUtility
-import zope.interface
-
 from plone.app.layout.globals.tests.base import GlobalsTestCase
 from plone.app.layout.navigation.interfaces import INavigationRoot
+from plone.portlets.interfaces import IPortletType
+from plone.registry.interfaces import IRegistry
+from zope.component import getUtility
+
+import zope.interface
 
 
 class TestLayoutView(GlobalsTestCase):

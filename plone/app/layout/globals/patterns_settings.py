@@ -1,13 +1,13 @@
 # This module contains the global patterns settings
 
-from zope.interface import implements
-from zope.component import getAdapters
-from zope.publisher.browser import BrowserView
 from .interfaces import IPatternsSettingsRenderer
-from Products.CMFPlone.interfaces import IPatternsSettings
 from plone.registry.interfaces import IRegistry
-from zope.component import getUtility
+from Products.CMFPlone.interfaces import IPatternsSettings
+from zope.component import getAdapters
 from zope.component import getMultiAdapter
+from zope.component import getUtility
+from zope.interface import implements
+from zope.publisher.browser import BrowserView
 
 
 class PatternsSettings(BrowserView):

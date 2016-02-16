@@ -1,15 +1,13 @@
+from plone.app.layout.viewlets.common import TitleViewlet
+from plone.registry.interfaces import IRegistry
+from Products.CMFPlone.browser.syndication.adapters import BaseItem
+from Products.CMFPlone.browser.syndication.adapters import FolderFeed
 from Products.CMFPlone.interfaces import ISocialMediaSchema
 from Products.CMFPlone.interfaces.syndication import IFeedItem
 from Products.CMFPlone.utils import getSiteLogo
-from Products.CMFPlone.browser.syndication.adapters import FolderFeed, BaseItem
-
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
-
-from plone.app.layout.viewlets.common import TitleViewlet
-from plone.registry.interfaces import IRegistry
-
-from zope.component import queryMultiAdapter
 from zope.component import getUtility
+from zope.component import queryMultiAdapter
 from zope.component.hooks import getSite
 
 

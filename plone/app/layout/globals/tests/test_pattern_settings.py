@@ -1,5 +1,5 @@
-from plone.app.layout.globals.tests.base import GlobalsTestCase
 from plone.app.layout.globals.patterns_settings import PatternsSettings
+from plone.app.layout.globals.tests.base import GlobalsTestCase
 from plone.registry.interfaces import IRegistry
 from zope.component import getUtility
 

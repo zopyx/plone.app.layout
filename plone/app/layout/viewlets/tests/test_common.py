@@ -1,6 +1,4 @@
 # -*- coding: utf-8 -*-
-from Products.CMFPlone.interfaces import INonStructuralFolder
-from Products.CMFPlone.interfaces import ISiteSchema
 from plone.app.layout.navigation.interfaces import INavigationRoot
 from plone.app.layout.viewlets.common import ContentViewsViewlet
 from plone.app.layout.viewlets.common import GlobalSectionsViewlet
@@ -10,6 +8,8 @@ from plone.app.layout.viewlets.common import ViewletBase
 from plone.app.layout.viewlets.tests.base import ViewletsTestCase
 from plone.protect import authenticator as auth
 from plone.registry.interfaces import IRegistry
+from Products.CMFPlone.interfaces import INonStructuralFolder
+from Products.CMFPlone.interfaces import ISiteSchema
 from zope.component import getUtility
 from zope.interface import alsoProvides
 from zope.interface import directlyProvides
