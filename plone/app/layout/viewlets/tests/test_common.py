@@ -84,7 +84,8 @@ class TestContentViewsViewlet(ViewletsTestCase):
         view.update()
         self.assertEqual(1, len([t for t in view.tabSet1 if t[
                          'id'] == 'folderContents']))
-        self.assertEqual(['edit'], [t['id'] for t in view.tabSet1 if t['selected']])
+        self.assertEqual(['edit'], [t['id']
+                                    for t in view.tabSet1 if t['selected']])
 
     def testTitleViewlet(self):
         """Title viewlet renders navigation root title

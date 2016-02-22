@@ -7,6 +7,7 @@ class TestWorkflowHistoryViewlet(ViewletsTestCase):
     """
     Test the workflow history viewlet
     """
+
     def afterSetUp(self):
         # add document, perform transition, set history for non-existent
         # member and also None (anonymous)
@@ -66,6 +67,7 @@ class TestContentHistoryViewlet(ViewletsTestCase):
     """
     Test the workflow history viewlet
     """
+
     def afterSetUp(self):
         # add document, perform transition, set history for non-existent
         # member and also None (anonymous)
@@ -96,7 +98,8 @@ class TestContentHistoryViewlet(ViewletsTestCase):
         viewlet.update()
         history = viewlet.revisionHistory()
         self.assertTrue(
-            'http://nohost/plone/Members/test_user_1_/d1/@@history?one=1&two=0' in history[0]['diff_previous_url']
+            'http://nohost/plone/Members/test_user_1_/d1/@@history?one=1&two=0' in history[
+                0]['diff_previous_url']
         )
 
         # check diff link does not appear if content is not diffable
@@ -107,7 +110,8 @@ class TestContentHistoryViewlet(ViewletsTestCase):
         self.assertFalse('diff_previous_url' in history[0])
 
     def test_revertAbility(self):
-        # check revert URL is generated only if the user has the appropriate permission
+        # check revert URL is generated only if the user has the appropriate
+        # permission
         repo_tool = self.portal.portal_repository
         request = self.app.REQUEST
         context = getattr(self.folder, 'd1')
@@ -122,7 +126,8 @@ class TestContentHistoryViewlet(ViewletsTestCase):
         self.assertTrue(
             'http://nohost/plone/Members/test_user_1_/d1/revertversion' in history[0]['revert_url'])  # noqa
 
-        self.portal.manage_permission('CMFEditions: Revert to previous versions', [], False)
+        self.portal.manage_permission(
+            'CMFEditions: Revert to previous versions', [], False)
 
         viewlet.update()
         history = viewlet.revisionHistory()

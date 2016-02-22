@@ -13,7 +13,7 @@ from Products.CMFPlone.interfaces.controlpanel import ISiteSchema
 from Products.Five.browser.metaconfigure import ViewMixinForTemplates
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 from zope.browserpage.viewpagetemplatefile import \
-from zope.component import getMultiAdapter
+    from zope.component import getMultiAdapter
 from zope.component import getUtility
 from zope.component import queryMultiAdapter
 from zope.component import queryUtility
@@ -87,7 +87,8 @@ class LayoutPolicy(BrowserView):
         anon = membership.isAnonymousUser()
 
         registry = getUtility(IRegistry)
-        settings = registry.forInterface(ISiteSchema, prefix="plone", check=False)
+        settings = registry.forInterface(
+            ISiteSchema, prefix="plone", check=False)
         icon_visibility = settings.icon_visibility
 
         if icon_visibility == 'enabled':
@@ -105,7 +106,8 @@ class LayoutPolicy(BrowserView):
         membership = getToolByName(context, "portal_membership")
         anon = membership.isAnonymousUser()
         registry = getUtility(IRegistry)
-        settings = registry.forInterface(ISiteSchema, prefix="plone", check=False)
+        settings = registry.forInterface(
+            ISiteSchema, prefix="plone", check=False)
         thumb_visibility = settings.thumb_visibility
 
         if thumb_visibility == 'enabled':
@@ -222,10 +224,12 @@ class LayoutPolicy(BrowserView):
         else:
             user = membership.getAuthenticatedMember()
             for role in user.getRolesInContext(self.context):
-                body_classes.append('userrole-' + role.lower().replace(' ', '-'))
+                body_classes.append(
+                    'userrole-' + role.lower().replace(' ', '-'))
 
             registry = getUtility(IRegistry)
-            settings = registry.forInterface(ISiteSchema, prefix='plone', check=False)
+            settings = registry.forInterface(
+                ISiteSchema, prefix='plone', check=False)
 
             # toolbar classes
             try:

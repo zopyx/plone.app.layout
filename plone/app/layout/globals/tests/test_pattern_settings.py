@@ -20,7 +20,8 @@ class TestPatternSettings(GlobalsTestCase):
         settings = PatternsSettings(self.folder, self.app.REQUEST)
         result = settings()
         self.assertEquals(result['data-base-url'], self.folder.absolute_url())
-        self.assertEquals(result['data-portal-url'], self.portal.absolute_url())
+        self.assertEquals(result['data-portal-url'],
+                          self.portal.absolute_url())
         self.assertEquals(result['data-view-url'], self.folder.absolute_url())
 
     def testFileUrls(self):

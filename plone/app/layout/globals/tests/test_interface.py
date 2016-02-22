@@ -10,7 +10,6 @@ optionflags = doctest.REPORT_ONLY_FIRST_FAILURE | doctest.ELLIPSIS
 # Used in tests
 
 
-
 class IZero(Interface):
     ''' Test interface zero
     '''

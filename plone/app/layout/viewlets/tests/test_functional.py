@@ -5,7 +5,7 @@
 """
     PLONE_APP_CONTENTTYPES_FUNCTIONAL_TESTING
 from plone.app.contenttypes.testing import \
-from plone.testing import layered
+    from plone.testing import layered
 
 import doctest
 import unittest
