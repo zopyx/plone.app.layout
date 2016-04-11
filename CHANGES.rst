@@ -10,7 +10,8 @@ New:
 
 Fixes:
 
-- *add item here*
+- Fix base tag differs from actual URL (fixes `#86`_).
+  [rodfersou]
 
 
 2.3.14 (2016-02-15)
@@ -1275,3 +1276,5 @@ Fixes:
 - Show the authors full name in presentation view. This fixes
   http://dev.plone.org/plone/ticket/6810
   [wichert]
+
+.. _`#86`: https://github.com/plone/plone.app.layout/issues/86
